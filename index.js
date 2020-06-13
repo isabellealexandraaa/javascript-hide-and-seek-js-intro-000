@@ -18,7 +18,14 @@ function increaseRankBy(n) {
 }
 
 
-function querySelectorAll() {
+function deepestChild() {
+  let list1 = document.querySelector('div#grand-node')
+  let list2 = list1.children[0]
 
+    while (list2) {
+      list1 = list2
+      list2 = list1.children[0]
+    }
 
-}
+    return list1
+  }
